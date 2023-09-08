@@ -6,6 +6,10 @@ const sequelize = require('./config/db');
 
 const userRoutes = require('./routes/user');
 
+const cors = require('cors');
+
+const morgan = require('morgan');
+
 //configuración de la base de datos:
 
 sequelize.authenticate()
@@ -19,7 +23,8 @@ sequelize.authenticate()
 
 // le dicimos que serialice la información a json
 app.use(express.json())
-
+app.use(cors());
+app.use(morgan());
 //configurar rutas
 
 app.use('/api', userRoutes);
