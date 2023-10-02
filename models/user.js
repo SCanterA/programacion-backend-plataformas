@@ -40,3 +40,4 @@ User.sync()
     });
 
 module.exports = User;
+

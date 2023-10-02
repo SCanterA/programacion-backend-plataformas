@@ -6,9 +6,8 @@ router.get('/users', userController.getAllUsers);
 
 router.post('/users', userController.createUser);
 
-/**
- * Tarea para la casa:
- * Realizar put y delete
- */
+router.put('/users/:id', userController.updateUsers)
+
+router.delete('/users/:id', userController.deleteUser)
 
 module.exports = router;
